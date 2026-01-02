@@ -17,11 +17,11 @@ class Square(Figure):
         self.__side_length = side_length
 
     def calculate_area(self):
-        return self.__side_length * self.__side_length
+        return self.__side_length ** 2
 
     def info(self):
-        print(f'Square side length: {self.__side_length}{Figure.unit}, '
-              f'area: {self.calculate_area()}{Figure.unit}')
+        print(f'Square side length: {self.__side_length}{self.unit}, '
+              f'area: {self.calculate_area()}{self.unit}')
 
 
 class Rectangle(Figure):
@@ -34,12 +34,12 @@ class Rectangle(Figure):
         return self.__length * self.__width
 
     def info(self):
-        print(f'Rectangle length: {self.__length}{Figure.unit}, '
-              f'width: {self.__width}{Figure.unit}, area: {self.calculate_area()}{Figure.unit}')
+        print(f'Rectangle length: {self.__length}{self.unit}, '
+              f'width: {self.__width}{self.unit}, area: {self.calculate_area()}{self.unit}')
 
 
-my_list = [Square(7), Square(4), Rectangle(3,8), Rectangle(5, 6),
+figures_list = [Square(7), Square(4), Rectangle(3,8), Rectangle(5, 6),
            Rectangle(9, 6)]
 
-for i in my_list:
-    i.info()
+for figure in figures_list:
+    figure.info()
