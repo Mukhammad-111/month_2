@@ -11,10 +11,10 @@ class Person:
 class Student(Person):
     def __init__(self, full_name, age, is_married, marks):
         super().__init__(full_name, age, is_married)
-        self.marks = marks
+        self.marks = dict(marks)
 
     def average_mark(self):
-        average = sum(self.marks.values()) // len(self.marks.keys())
+        average = sum(self.marks.values()) / len(self.marks.keys())
         print(f'AVERAGE MARK: {average}')
 
 
