@@ -14,7 +14,7 @@ class Student(Person):
         self.marks = dict(marks)
 
     def average_mark(self):
-        average = sum(self.marks.values()) / len(self.marks.keys())
+        average = sum(self.marks.values()) // len(self.marks.keys())
         print(f'AVERAGE MARK: {average}')
 
 
